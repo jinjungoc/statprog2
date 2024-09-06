@@ -1,3 +1,6 @@
+#detach("package:dataCleaner", unload = TRUE)
+remotes::install_github("jinjungoc/statprog2/dataCleaner")
+
 # Functionality: R package for automatically clean, summarize and impute missing values in datasets
 
 # Load devtools
@@ -8,7 +11,7 @@ library(devtools)
 create("dataCleaner")
 
 #' Clean Data Function
-#' 
+#'
 #' This function removes rows with NA values from a given dataset.
 #' @param data A data frame to be cleaned.
 #' @return A cleaned data frame without NA values.
@@ -21,7 +24,7 @@ clean_data <- function(data) {
 
 
 #' Summarize Data Function
-#' 
+#'
 #' This function returns basic summary statistics of numeric columns.
 #' @param data A data frame.
 #' @return Summary statistics for each numeric column.
@@ -34,7 +37,7 @@ summarize_data <- function(data) {
 
 
 #' Impute Missing Values Function
-#' 
+#'
 #' This function imputes missing values with column means.
 #' @param data A data frame with missing values.
 #' @return A data frame with missing values imputed.
@@ -50,9 +53,11 @@ impute_missing <- function(data) {
   return(data)
 }
 
+# Generates documentation files and updates the NAMESPACE based on Roxygen comments.
 roxygen2::roxygenise()
 
+# Updates documentation and NAMESPACE from Roxygen comments.
 devtools::document()
 
+# Runs checks on the package to ensure it is correctly structured and functional.
 devtools::check()
-
