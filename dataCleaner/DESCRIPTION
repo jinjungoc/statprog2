@@ -1,0 +1,10 @@
+Package: dataCleaner
+Title: Data Cleaning Functions for Quick Preprocessing
+Version: 0.0.0.1000
+Authors@R: 
+    person("Ngoc Anh", "Vu", , "ngocanh.vu@campus.lmu.com", role = c("aut", "cre"))
+Description: This package provides a set of functions to quickly clean and preprocess raw datasets, including handling missing data, removing duplicates, and transforming variables for analysis.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
